@@ -72,6 +72,7 @@ extern {
 }
 
 fn main() {
+	#[cfg(not(target_arch = "wasm32"))]
 	unsafe {
 		emscripten_exit_with_live_runtime();
 	}
